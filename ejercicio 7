@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class ejer8 {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+
+        int[] numeros = {4, 8, 15, 16, 23, 42, 10};
+
+        System.out.println("===== Búsqueda de Número =====");
+        System.out.print("Ingresa el número que deseas buscar: ");
+        int buscado = input.nextInt();
+
+        int i = 0;
+        boolean encontrado = false;
+
+
+        while (i < numeros.length) {
+
+            if (numeros[i] == buscado) {
+                System.out.println("Número encontrado en el índice: " + i);
+                encontrado = true;
+                break;
+            }
+
+            i++;
+        }
+
+        if (!encontrado) {
+            System.out.println("El número no se encontró en el arreglo.");
+        }
+    }
+}
