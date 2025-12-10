@@ -1,0 +1,65 @@
+import java.util.Scanner;
+
+public class ejer1 {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        int figura;
+        double area = 0.0;
+
+        System.out.println("===== CALCULADORA DE ÁREA =====");
+        System.out.println("Elige una figura para obtener su área:");
+        System.out.println("1. Círculo");
+        System.out.println("2. Rectángulo");
+        System.out.print("Opción: ");
+        figura = input.nextInt();
+
+        switch (figura) {
+
+            case 1:
+                System.out.print("Introduce el radio del círculo: ");
+                double radio = input.nextDouble();
+
+                if (radio <= 0) {
+                    System.out.println("El radio debe ser mayor a 0.");
+                    return; // Salir del programa
+                }
+
+                area = Math.PI * radio * radio;
+                System.out.printf("El área del círculo es: %.2f%n", area);
+                break;
+
+            case 2:
+                System.out.print("Introduce la base del rectángulo: ");
+                double base = input.nextDouble();
+
+                System.out.print("Introduce la altura del rectángulo: ");
+                double altura = input.nextDouble();
+
+                if (base <= 0 || altura <= 0) {
+                    System.out.println("La base y altura deben ser mayores a 0.");
+                    return;
+                }
+
+                area = base * altura;
+                System.out.printf("El área del rectángulo es: %.2f%n", area);
+                break;
+
+            default:
+                System.out.println("Esta opción no es válida.");
+                return;
+        }
+
+
+        if (area > 100) {
+            System.out.println("El área calculada es MAYOR que 100 unidades cuadradas.");
+        } else if (area < 100) {
+            System.out.println("El área calculada es MENOR que 100 unidades cuadradas.");
+        } else {
+            System.out.println("El área es EXACTAMENTE 100 unidades cuadradas.");
+        }
+
+       
+    }
+}
