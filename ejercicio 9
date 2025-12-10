@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class ejer9 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Ingresa un número entero positivo N: ");
+        int N = sc.nextInt();
+
+        generarSecuencia(N);
+    }
+
+    public static void generarSecuencia(int N) {
+        for (int i = 1; i <= N; i++) {
+            if (i % 2 == 0) {
+                System.out.println("Par");
+            } else {
+                System.out.println("Impar");
+            }
+        }
+    }
+}
