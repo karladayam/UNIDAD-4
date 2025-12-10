@@ -1,0 +1,22 @@
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class ejer6{
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        int[] numeros = {10, 20, 30, 40, 50};
+
+        System.out.println("===== Inversor de Arreglo Numérico =====");
+        System.out.println("Arreglo original: " + Arrays.toString(numeros));
+
+        System.out.println("Arreglo en orden inverso:");
+        
+        for (int i = numeros.length - 1; i >= 0; i--) {
+            System.out.println("Índice " + i + ": " + numeros[i]);
+        }
+
+        input.close();
+    }
+}
