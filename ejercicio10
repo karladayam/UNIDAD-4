@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class ejer10 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        float[] calificaciones = new float[5];
+
+        System.out.println("=== Ingreso de Calificaciones ===");
+
+        for (int i = 0; i < 5; i++) {
+            System.out.print("Ingresa la calificación " + (i + 1) + ": ");
+            calificaciones[i] = sc.nextFloat();
+        }
+
+        float promedio = calcularPromedio(calificaciones, 5);
+
+        System.out.println("\nEl promedio de las 5 calificaciones es: " + promedio);
+    }
+
+    public static float calcularPromedio(float[] arreglo, int tamaño) {
+        float suma = 0;
+
+        for (int i = 0; i < tamaño; i++) {
+            suma += arreglo[i];
+        }
+
+        float promedio = suma / tamaño;
+        return promedio;
+    }
+}
