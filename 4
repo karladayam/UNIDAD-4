@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+public class ejer4 {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        int opcion;
+        double unidades;
+        double conversion;
+
+        System.out.println("==== CONVERSOR DE UNIDADES ====");
+        System.out.println("Elige la opción de conversión que deseas hacer:");
+        System.out.println("1. Kilómetros a Millas");
+        System.out.println("2. Centígrados a Fahrenheit");
+        System.out.println("3. Metros a Pies");
+        System.out.print("Opción: ");
+        opcion = input.nextInt();
+
+        switch (opcion) {
+
+            case 1:
+                System.out.println("===== Conversión de Kilómetros a Millas =====");
+                System.out.print("Ingresa los kilómetros: ");
+                unidades = input.nextDouble();
+                conversion = unidades * 0.621371;
+                System.out.printf("%.2f kilómetros equivalen a %.2f millas.%n", unidades, conversion);
+                break;
+
+            case 2:
+                System.out.println("===== Conversión de Centígrados a Fahrenheit =====");
+                System.out.print("Ingresa los grados Celsius: ");
+                unidades = input.nextDouble();
+                conversion = (unidades * 9.0 / 5.0) + 32;
+                System.out.printf("%.2f °C equivalen a %.2f °F.%n", unidades, conversion);
+                break;
+
+            case 3:
+                System.out.println("===== Conversión de Metros a Pies =====");
+                System.out.print("Ingresa los metros: ");
+                unidades = input.nextDouble();
+                conversion = unidades * 3.28084;
+                System.out.printf("%.2f metros equivalen a %.2f pies.%n", unidades, conversion);
+                break;
+
+            default:
+                System.out.println("Opción no válida. Por favor, reinicie el programa.");
+                break;
+        }
+        
+    }
+}
