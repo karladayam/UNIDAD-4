@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class ejer3{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("===== SUMA DE RANGO =====");
+        System.out.print("Ingresa el inicio del rango (A): ");
+        int inicio = input.nextInt();
+
+        System.out.print("Ingresa el fin del rango (B): ");
+        int fin = input.nextInt();
+
+
+        if (inicio > fin || inicio < 0 || fin < 0) {
+            System.out.println("A debe ser menor o igual que B y ambos deben ser positivos.");
+            input.close();
+            return;
+        }
+
+        int suma = 0;
+
+
+        for (int i = inicio; i <= fin; i++) {
+            suma += i;
+        }
+
+
+        System.out.println("La suma de los números entre " + inicio + " y " + fin + " es: " + suma);
+
+
+    }
+}
