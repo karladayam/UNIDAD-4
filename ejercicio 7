@@ -1,0 +1,27 @@
+public class ejer7 {
+    public static void main(String[] args) {
+
+
+        char[] letras = {'o', 'z', 'a', 'l', 'n', 'r', 'd', 'i', 'w', 'x'};
+
+        int contadorVocales = 0;
+
+        System.out.println("Contador de Vocales");
+
+
+        for (int i = 0; i < letras.length; i++) {
+
+            char letra = letras[i];
+
+
+            if (letra == 'a' || letra == 'e' || letra == 'i' ||
+                    letra == 'o' || letra == 'u') {
+
+                contadorVocales++;
+            }
+        }
+
+
+        System.out.println("Total de vocales encontradas: " + contadorVocales);
+    }
+}
