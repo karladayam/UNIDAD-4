@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class ejer5 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("===== Clasificador de Calificaciones =====");
+        System.out.print("Ingresa tu calificación: ");
+        double calificacion = input.nextDouble();
+
+        String resultado = clasificarCalificacion(calificacion);
+
+        System.out.println("Tu nota es: " + resultado);
+
+        input.close();
+    }
+
+    public static String clasificarCalificacion(double calificacion) {
+
+        if (calificacion >= 90 && calificacion <= 100) {
+            return "Sobresaliente";
+        }
+        else if (calificacion >= 80 && calificacion <= 89) {
+            return "Notable";
+        }
+        else if (calificacion >= 70 && calificacion <= 79) {
+            return "Aprobatorio";
+        }
+        else if (calificacion >= 0 && calificacion <= 69) {
+            return "Reprobatorio";
+        }
+        else {
+            return "Valor fuera del rango 0-100";
+        }
+    }
+}
